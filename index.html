@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header_2">
+        <div style="display: flex; height: 100px; background-color:#1c1c1c; ;">
+            <a style="margin: auto;" href="">
+                <img style="height: 65px;" src="./assets/icons/logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="hd" style="background-color: #262626; padding: 10px 20px;">
+            <div style="margin-bottom: 10px;display: flex; gap: 10px;justify-content: center;">
+                <div
+                    style="display: flex; justify-content: center; align-items: center; position: relative;  width: 100px; height: 50px; background-color: #e5e5e5;">
+                    <i class="fa-solid fa-basket-shopping" style="color: #888888;"></i>
+                    <p class="basket_Shop_Number">0</p>
+                </div>
+
+
+                <div class="log_Innn" style="display: flex; gap: 10px;justify-content: center;">
+                    <div class="item_Hover" style="width: 100px; height: 50px; background-color: #e5e5e5;">
+                        <a style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50px;"
+                            href="./login.html">
+                            <i class="item_Hover_i  fa-solid fa-right-to-bracket" style="color: #888888;"></i>
+                            <span class="item_Hover_span" style="font-size: 10px; color: #888888;">Log in</span>
+                        </a>
+                    </div>
+                    <div class="item_Hover" style=" width: 100px; height: 50px; background-color: #e5e5e5;">
+                        <a style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50px;"
+                            href="./signup.html">
+                            <i class="item_Hover_i fa-solid fa-user-plus" style="color: #888888;"></i>
+                            <span class="item_Hover_span" style="font-size: 10px; color: #888888;">Creat an
+                                acount</span>
+                        </a>
+                    </div>
+                    <div class="item_Hover"
+                        style="width: 100px; height: 50px; background-color: #e5e5e5; display: none;">
+                        <a style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50px;"
+                            href="">
+                            <i class="item_Hover_i  fa-solid fa-right-to-bracket"
+                                style="color: #888888; rotate: 180deg;"></i>
+                            <span id="lblUserNames" class="item_Hover_span" style="font-size: 10px; color: #888888;">Log
+                                in</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div
+                    style="display: flex; justify-content: center; align-items: center; width: 100px; height: 50px; background-color: #e5e5e5;">
+                    <h1 style="font-size: 14px; color: #888888;">VND</h1>
+                    <i style="color: #888888; padding-left: 10px;" class="fa-solid fa-angle-down"></i>
+
+                </div>
+            </div>
+
+            <div class="sch" style="display: flex; gap: 10px; height: 50px;">
+                <input style="width: 100%; background-color: #e5e5e5; padding-left: 20px;" type="text"
+                    placeholder="SEARCH....">
+                <div
+                    style="height: 50px;width: 50px;background-color: #e5e5e5; display: flex;justify-content: center;align-items: center;">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #888888; font-size: 20px;"></i>
+                </div>
+            </div>
+
+            <div
+                style="position: relative; height: 50px; width: 100%; background-color: #e5e5e5; color: #1c1c1c;margin-top: 10px; display: flex;justify-content: space-between;align-items: center;padding: 0 20px;">
+                <h1 style="color: #333;">APPAREL</h1>
+                <i id="open_Menu" class="fa-solid fa-bars" style="color: #333;"></i>
+                <div id="menu"
+                    style="display: none; border: 2px solid #333333; border-top: 0; position: absolute; top: 55px; background-color: #ffffff; width: 100%; right: 0; padding: 0 20px;">
+                    <div style="height: 40px; display: flex; align-items: center;"><a
+                            style="font-size: 20px; color: #333;" href="./index.html">Home</a></div>
+                    <div style="height: 40px; display: flex; align-items: center;"><a
+                            style="font-size: 20px; color: #333;" href="./products.html">Products</a></div>
+                    <div style="height: 40px; display: flex; align-items: center;"><a
+                            style="font-size: 20px; color: #333;" href="./sale.html">Sale</a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <header class="header_1">
+        <div id="header-left">
+            <div id="logo">
+                <a href=""><img src="./assets/icons/logo.png" alt=""></a>
+
+            </div>
+            <nav class="header_Nav ">
+                <ul class="header_Nav_Infor">
+                    <!--  LIST TIÊU ĐỀ THƯỜNG CÁC TRANG SẼ GIỐNG NHAU BAO GỒM ABOUT CONTACT ..... LOGIN  -->
+                    <li style="border-bottom: 7px solid #ffffff; color: #ffffff;">
+                        <a style="color: #ffffff;" href="./index.html">HOME</a>
+
+                    </li>
+                    <li class="header_Nav_Infor_Products" style="position: relative;">
+                        <a class="header_Nav_Infor_Products_Name" href="./products.html">PRODUCTS</a>
+                        <span class="header_Nav_Infor_Hot">HOT DEALS</span>
+                        <div class=" header_Nav_Infor_Hover">
+                            <div class=" header_Nav_Infor_Hover_Items grid grid-cols-4 gap-3 " style="padding: 30px;">
+                                <div>
+                                    <h1>CATALOG#1</h1>
+                                    <ul>
+                                        <li>
+                                            <a href="">Footwear</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Menclothing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h1>CATALOG#1</h1>
+                                    <ul>
+                                        <li>
+                                            <a href="">Footwear</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Menclothing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h1>CATALOG#1</h1>
+                                    <ul>
+                                        <li>
+                                            <a href="">Footwear</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Menclothing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h1>CATALOG#1</h1>
+                                    <ul>
+                                        <li>
+                                            <a href="">Footwear</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Menclothing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="header_Nav_Infor_Hover_Mega grid grid-cols-2 gap-5"
+                                style="padding: 0px 20px 20px 20px;">
+                                <div>
+                                    <a href="" style="position: relative;">
+                                        <img src="./assets/imgs/megamenu2_banner1_img.avif" alt="">
+                                        <div class="header_Nav_Infor_Hover_Mega_Text">
+                                            <h2>Sale
+                                                <span>50% OFF</span>
+                                            </h2>
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <a href="" style="position: relative;">
+                                        <img src="./assets/imgs/megamenu2_banner2_img.avif" alt="">
+                                        <div class="header_Nav_Infor_Hover_Mega_Text">
+                                            <h2>New
+                                                <span>arrivals</span>
+                                            </h2>
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="header_Nav_Infor_Sales" style="position: relative;">
+                        <a class="header_Nav_Infor_Sales_Name" href="./sale.html">SALE</a>
+                        <div class="header_Nav_Infor_Hovers">
+                            <div id="containerProduct" style="padding: 50px;" class="grid grid-cols-4 gap-3">
+                                <!-- <div class="sale_Products"> -->
+                                <!-- <div style="height: 250px; width: 150px; background-color: #888888;"> -->
+                                <!-- <img class="sale_Products_Img" -->
+                                <!-- src="./assets/imgs/nautica-mens-sleepwear-quarter-zip-knit-seaworthy_1_large.webp" -->
+                                <!-- alt=""> -->
+                                <!-- </div> -->
+                                <!-- <div class="product_Name">Sweater</div> -->
+                                <!-- <div class="product_Price">50$</div> -->
+                                <!-- </div> -->
+
+                                <!-- <div class="sale_Products"> -->
+                                <!-- <div style="height: 250px; width: 150px; background-color: #888888;">
+                                    <img class="sale_Products_Img" src="" alt="">
+                                </div>
+                                <div class="product_Name"></div>
+                                <div class="product_Price"></div> -->
+                                <!-- </div> -->
+
+                                <!-- <div class="sale_Products"> -->
+                                <!-- <div style="height: 250px; width: 150px; background-color: #888888;">
+                                    <img class="sale_Products_Img" src="" alt="">
+                                </div>
+                                <div class="product_Name"></div>
+                                <div class="product_Price"></div> -->
+                                <!-- </div> -->
+
+                                <!-- <div class="sale_Products"> -->
+                                <!-- <div style="height: 250px; width: 150px; background-color: #888888;"> -->
+                                <!-- <img class="sale_Products_Img" src="" alt=""> -->
+                                <!-- </div> -->
+                                <!-- <div class="product_Name"></div> -->
+                                <!-- <div class="product_Price"></div> -->
+                                <!-- </div> -->
+
+                                <!-- phan nay ty e css lai de ra ngoai cai div chua product e nhe -->
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; gap: 10px; justify-content: center;">
+                                <div>
+                                    <img src="./assets/imgs/megamenu4_banner1_img.avif" alt="">
+                                    <div>
+
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <img src="./assets/imgs/megamenu4_banner2_img.avif" alt="">
+                                    <div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <div style="width: 100px;"></div>
+        </div>
+
+        <div class="header_Right">
+            <div style="background-color: #ffffff;">
+                <a href="">
+                    <i class="fa-solid fa-basket-shopping" style="color: #888888;"></i>
+                    <p class="basket_Shop_Number">0</p>
+                </a>
+
+            </div>
+
+            <ul>
+                <li id="log_In">
+                    <a href="./login.html">
+                        <i id="log_In_Icon" class="fa-solid fa-right-to-bracket" style="color: #888888;"></i>
+                        <span id="log_In_Name">Log in</span>
+                    </a>
+
+                </li>
+
+                <li id="creat_Acount">
+                    <a href="./signup.html">
+                        <i id="creat_Acount_Icon" class="fa-solid fa-user-plus" style="color: #888888;"></i>
+                        <span id="creat_Acount_Name">Creat an acount</span>
+                    </a>
+                </li>
+
+                <li id="log_Out" style="display: none;">
+                    <a href="./login.html">
+                        <i id="log_In_Icon" class="fa-solid fa-right-to-bracket"
+                            style="color: #888888; rotate: 180deg;"></i>
+                        <span id="lblUserName">abc</span>
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <div style="height: 100px;">
+                <div style="display: flex; line-height: 100px; align-items: center; justify-content: center;"
+                    id="selectBox" onclick="clickSelectBox()">
+                    <h1 style="font-size: 14px; color: #888888;" id="selectBoxText">VND</h1>
+                    <i style="color: #888888; padding-left: 10px;" class="fa-solid fa-angle-down"></i>
+                </div>
+                <div style="  position: absolute;top: 405px; border: 1px solid #e9e9e9;" id="selectOption">
+                    <ul id="options">
+                        <li style=" font-size: 10px; color: #888888; height: 33.333px;" class="option">
+                            <div class="money optionText" style="height: 100%;" class="">VND</div>
+                        </li>
+                        <li style="font-size: 10px; color: #888888; height: 33.333px;" class="option">
+                            <div class="money" style="height: 100%;" class="optionText">USD</div>
+                        </li>
+                        <li style="font-size: 10px; color: #888888; height: 33.333px;" class="option">
+                            <div class="money" style="height: 100%;" class="">TWD</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header_Search_Hover" style="position: relative; z-index: 100;">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #888888;"></i>
+
+                </a>
+                <div class="header_Search">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+
+            <!-- <ul>
+                <li style="background-color: #ffffff;"><a href="">
+                        <i class="fa-solid fa-basket-shopping" style="color: #888888;"></i>
+                        <p class="basket_Shop_Number">0</p>
+                    </a></li>
+
+                <li class="bg-">
+                    <a href="">
+                        <i class="fa-solid fa-right-to-bracket" style="color: #888888;"></i>
+                        <span>Log in</span>
+                    </a>
+
+                </li>
+
+
+                <li><a href="">
+                        <i class="fa-solid fa-user-plus" style="color: #888888;"></i>
+                        <span>Creat an acount</span>
+
+                    </a></li>
+
+                <li><a href="">
+                        <span></span>
+                        <i class="fa-solid fa-angle-down" style="color: #888888;"></i>
+
+                    </a></li>
+
+                <li><a href="">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #888888;"></i>
+
+                    </a></li>
+            </ul> -->
+        </div>
+    </header>
+
+    <main>
+        <div class=" main_Infor">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="./assets/imgs/slide1_image.webp" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/imgs/slide2_image.webp" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/imgs/slide3_image.webp" alt="Slide 3">
+                    </div>
+                </div>
+                <!-- Dots/Pagination -->
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div style="padding-top: 10px;" class="grid md:grid-cols-3 gap-2 grid-cols-1 ">
+                <div class="col-span-1 img3_Container">
+                    <a href=""><img src="./assets/imgs/custom_showcase1_img.webp" alt=""></a>
+                    <div>
+                        <h3>New arrivals</h3>
+                        <h1>Women's</h1>
+                    </div>
+                </div>
+
+                <div class="col-span-1 img3_Container">
+                    <a href=""><img src="./assets/imgs/custom_showcase2_img.webp" alt=""></a>
+                    <div>
+                        <h3>New arrivals</h3>
+                        <h1>Men's</h1>
+                    </div>
+                </div>
+
+                <div class="col-span-1 img3_Container">
+                    <a href=""><img src="./assets/imgs/custom_showcase3_img.webp" alt=""></a>
+                    <div>
+                        <h3>New arrivals</h3>
+                        <h1>FOOTWEAR</h1>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- <div class="feature_Products">
+                <h1>FEATURED PRODUCTS</h1>
+                <div class="grid grid-cols-4 grid-rows-2">
+                    <div>
+                        <a href="">
+                            <img src="" alt="">
+                        </a>
+                        <h2></h2>
+                        <p></p>
+                    </div>
+
+                </div>
+
+            </div> -->
+
+            <div
+                style="position: relative; height: 700px; margin-top: 20px; background-image: url(./assets/imgs/custom_bottom_img.jpg);">
+                <div class="image_Container">
+                    <h1>DEAL OF THE DAY</h1>
+                    <h2>Up to 30% off</h2>
+                    <button>SHOP NOW!</button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- NỘI DUNG CỦA TRANG HOME  -->
+        <footer>
+            <!-- FOOTER THƯỜNG SẼ CÁC TRANG GIỐNG NHAU -->
+            <article class="footer1 ">
+                <ul class="footer1_Infor">
+                    <li>
+                        <h1>Information</h1>
+                    </li>
+                    <li>HOME PAGE</li>
+                    <li>SEARCH</li>
+                </ul>
+
+                <ul class="footer1_Infor">
+                    <li>
+                        <h1>My Account</h1>
+                    </li>
+                    <li>MEN'S CLOTHING</li>
+                    <li>SALE</li>
+                </ul>
+
+                <ul class="footer1_Infor">
+                    <li>
+                        <h1>Categories</h1>
+                    </li>
+                    <li>SALE</li>
+                    <li>TEENS CLOTHING</li>
+                </ul>
+
+                <div class="footer1_Newsletter">
+
+                    <h1>Newsletter</h1>
+
+                    <div class="footer1_Email">
+                        <input type="text" placeholder="ENTER YOUR EMAIL">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                    </div>
+
+                    <ul class="footer1_Social">
+                        <li class="footer1_Social_Logo"><a href=""></a>
+                            <i class="fa-brands fa-twitter" style="color: #888888;"></i>
+                        </li>
+                        <li class="footer1_Social_Logo"><a href=""></a>
+                            <i class="fa-brands fa-facebook-f" style="color: #888888;"></i>
+                        </li>
+                        <li class="footer1_Social_Logo"><a href=""></a>
+                            <i class="fa-brands fa-youtube" style="color: #888888;"></i>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+            <article class="footer2">
+                <p>© 2024 Apparel. All Rights Reserved. Powered by Shopify. Design by Team3</p>
+            </article>
+
+            <article class="footer3" style="background-image: url(./assets/imgs/apparel_footer_banner.webp); ">
+                <!-- <img src="./assets/imgs/apparel_footer_banner.webp" alt=""> -->
+                <div class="footer3_Infor">
+                    <h1>Upgrade to a Fully-fledged Styler!</h1>
+                    <p>Featuring a additional pages, plugins, beautiful pictures and fully functionality!
+                    </p>
+                    <button>VIEW NOW!</button>
+                </div>
+            </article>
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- LUÔN NHỚ ĐẶT file script nằm cuối body -->
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/checkLogin.js"></script>
+    <script src="./assets/js/logout.js"></script>
+</body>
+
+</html>

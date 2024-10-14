@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Width Slider</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 300%;
+    }
+
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    } */
+
+    .dots {
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .dot.active {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Slider Section -->
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="https://via.placeholder.com/1920x600/ff7f7f/333333" alt="Slide 1">
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/1920x600/77ff7f/333333" alt="Slide 2">
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/1920x600/777fff/333333" alt="Slide 3">
+      </div>
+    </div>
+
+    <!-- Previous and Next Buttons -->
+    <!-- <a class="prev">&lt;</a>
+    <a class="next">&gt;</a> -->
+
+    <!-- Dots/Pagination -->
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- JavaScript for Slider -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.querySelector('.slider');
+    // const prev = document.querySelector('.prev');
+    // const next = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
+
+    let index = 0;
+
+    function showSlide(n) {
+      if (n >= slides.length) {
+        index = 0;
+      } else if (n < 0) {
+        index = slides.length - 1;
+      }
+      slider.style.transform = `translateX(${-index * 100}%)`;
+      updateDots();
+    }
+
+    function updateDots() {
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // next.addEventListener('click', () => {
+    //   index++;
+    //   showSlide(index);
+    // });
+
+    // prev.addEventListener('click', () => {
+    //   index--;
+    //   showSlide(index);
+    // });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        index = i;
+        showSlide(index);
+      });
+    });
+
+    // Auto-slide
+    setInterval(() => {
+      index++;
+      showSlide(index);
+    }, 10000); // 5 seconds interval for auto sliding
+  </script>
+
+</body>
+
+</html>
